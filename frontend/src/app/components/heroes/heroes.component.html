@@ -1,0 +1,13 @@
+<h1>Heroes</h1>
+
+<div class="card-columns">
+    <div class="card animated fadeIn" *ngFor="let heroe of heroes">
+        <img class="card-img-top" src=" {{heroe.img}} " alt={{heroe.name}}>
+        <div class="card-body">
+            <h5 class="card-title"> {{heroe.name}} </h5>
+            <p class="card-text"> {{heroe.power}} </p>
+            <button [routerLink]="['/heroe', heroe._id]" routerLinkActive="router-link-active" class="btn btn-outline-primary btn-block">Ver
+        más </button>
+        </div>
+    </div>
+</div>
